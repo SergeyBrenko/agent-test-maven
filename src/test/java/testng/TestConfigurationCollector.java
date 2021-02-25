@@ -36,8 +36,8 @@ public class TestConfigurationCollector {
         SessionStartDescriptor startDescriptor = getStartDescriptor("Chrome", "100", "iOS", "18.2", "Space Rocket");
         TestSessionRegistrar.getInstance().registerStart(startDescriptor);
 
-        log.info("Sleeping for 5 seconds...");
-        TimeUnit.SECONDS.sleep(5);
+        log.info("Sleeping for 10 seconds...");
+        TimeUnit.SECONDS.sleep(10);
 
         log.info("All available Environment Properties");
         keys.forEach(key -> log.info("'{}' : '{}'", key, envProperties.get(key)));
@@ -51,8 +51,8 @@ public class TestConfigurationCollector {
         Properties systemProperties = System.getProperties();
         TreeSet<Object> keys = new TreeSet<>(systemProperties.keySet());
 
-        log.info("Sleeping for 5 seconds...");
-        TimeUnit.SECONDS.sleep(5);
+        log.info("Sleeping for 10 seconds...");
+        TimeUnit.SECONDS.sleep(10);
 
         log.info("All available System Properties");
         keys.forEach(key -> log.info("'{}' : '{}'", key, systemProperties.get(key)));
