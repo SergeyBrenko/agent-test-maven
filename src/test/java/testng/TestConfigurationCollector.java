@@ -33,7 +33,7 @@ public class TestConfigurationCollector {
         Map<String, String> envProperties = System.getenv();
         TreeSet<Object> keys = new TreeSet<>(envProperties.keySet());
 
-        SessionStartDescriptor startDescriptor = getStartDescriptor("Chrome", "100", "iOS", "18.2", "Space Rocket");
+        SessionStartDescriptor startDescriptor = getStartDescriptor("Chrome", "100", "iOS", "18.2", "SpaceX Starship");
         TestSessionRegistrar.getInstance().registerStart(startDescriptor);
 
         log.info("Sleeping for 10 seconds...");
