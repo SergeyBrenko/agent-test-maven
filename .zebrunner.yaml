@@ -1,0 +1,32 @@
+version: 1.0
+templates:
+  - name: maven-java-11
+    spec:
+      environment:
+        docker.image: maven:3.8.1-openjdk-11
+        command: mvn clean test --no-transfer-progress -P suite=${SUITE} -P ${tread_count}
+      parameters:
+        env:
+          - name: VAR
+            default-value: false
+            type: booloean
+        command-vars:
+          - name: tread_count
+            default-value: 1
+            type: integer
+  - name: gradle-clean-test
+    spec:
+      environment:
+        docker.image: openjdk:11
+        command: ./gradlew clean test
+      parameters:
+        env:
+          - name: locale
+            default-value: en_us
+launchers:
+  - name: API Acceptance Suite
+    template: maven-java-11
+    parameters:
+      command-vars:
+        - name: SUITE
+          default-value: api
