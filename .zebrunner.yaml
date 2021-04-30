@@ -14,7 +14,8 @@ templates:
           - name: tread_count
             defaultValue: 1
             type: integer
-  - spec:
+  - name: gradle-clean-test
+    spec:
       environment:
         docker.image: openjdk:11
         command: ./gradlew clean test
@@ -24,7 +25,6 @@ templates:
             defaultValue: en_us
 launchers:
   - name: API Acceptance Suite
-    template: maven-java-11
     parameters:
       commandVars:
         - name: SUITE
