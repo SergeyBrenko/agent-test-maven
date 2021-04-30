@@ -9,7 +9,7 @@ templates:
         env:
           - name: VAR
             defaultValue: false
-            type: booloean
+            type: boolean
         commandVars:
           - name: tread_count
             defaultValue: 1
