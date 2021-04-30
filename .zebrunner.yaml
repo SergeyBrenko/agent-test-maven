@@ -17,7 +17,7 @@ templates:
   - name: gradle-clean-test
     spec:
       environment:
-        docker.image: openjdk:11
+        dockerImage: openjdk:11
         command: ./gradlew clean test
       parameters:
         env:
