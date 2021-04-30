@@ -8,11 +8,11 @@ templates:
       parameters:
         env:
           - name: VAR
-            default-value: false
+            defaultValue: false
             type: booloean
-        command-vars:
+        commandVars:
           - name: tread_count
-            default-value: 1
+            defaultValue: 1
             type: integer
   - name: gradle-clean-test
     spec:
@@ -22,11 +22,11 @@ templates:
       parameters:
         env:
           - name: locale
-            default-value: en_us
+            defaultValue: en_us
 launchers:
   - name: API Acceptance Suite
     template: maven-java-11
     parameters:
-      command-vars:
+      commandVars:
         - name: SUITE
-          default-value: api
+          defaultValue: api
