@@ -23,16 +23,12 @@ templates:
         env:
           - name: locale
             defaultValue: en_us
-  - name: gradle-clean-test
-    spec:
-      environment:
-        docker.image: openjdk:11
-        command: ./gradlew clean test
-      parameters:
-        env:
-          - name: locale
-            defaultValue: en_us
 launchers:
+  - name: API Acceptance Suite
+    parameters:
+      commandVars:
+        - name: SUITE
+          defaultValue: api
   - name: API Acceptance Suite
     parameters:
       commandVars:
