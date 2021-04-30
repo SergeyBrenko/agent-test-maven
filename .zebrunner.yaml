@@ -25,12 +25,7 @@ templates:
             defaultValue: en_us
 launchers:
   - name: API Acceptance Suite
-    parameters:
-      commandVars:
-        - name: SUITE
-          defaultValue: api
-  - name: API Acceptance Suite
-    template: not-existing
+    template: maven-java-11
     parameters:
       commandVars:
         - name: SUITE
