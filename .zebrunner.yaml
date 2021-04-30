@@ -14,8 +14,7 @@ templates:
           - name: tread_count
             defaultValue: 1
             type: integer
-  - name: gradle-clean-test
-    spec:
+  - spec:
       environment:
         docker.image: openjdk:11
         command: ./gradlew clean test
