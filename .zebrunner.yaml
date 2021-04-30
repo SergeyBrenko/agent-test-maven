@@ -30,6 +30,7 @@ launchers:
         - name: SUITE
           defaultValue: api
   - name: API Acceptance Suite
+    template: not-existing
     parameters:
       commandVars:
         - name: SUITE
