@@ -3,7 +3,7 @@ templates:
   - name: maven-java-11
     spec:
       environment:
-        docker.image: maven:3.8.1-openjdk-11
+        dockerImage: maven:3.8.1-openjdk-11
         command: mvn clean test --no-transfer-progress -P suite=${SUITE} -P ${tread_count}
       parameters:
         env:
